@@ -9,18 +9,24 @@ const Navbar = () => {
         <div className="navbar__center">
           <ul>
             <li>
-              <NavLink exact to="/">
+              <NavLink exact to="/" className="hover__underline_link">
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about" className="hover__underline_link">
+                About
+              </NavLink>
             </li>
             <li>
-              <NavLink to={"/contact"}>Contact</NavLink>
+              <NavLink to={"/contact"} className="hover__underline_link">
+                Contact
+              </NavLink>
             </li>
             <li>
-              <NavLink to={"/ourworks"}>Our Works</NavLink>
+              <NavLink to={"/ourworks"} className="hover__underline_link">
+                Our Works
+              </NavLink>
             </li>
           </ul>
         </div>

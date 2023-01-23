@@ -43,6 +43,9 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+      img {
+        border-radius: 10px;
+      }
       div {
         flex: 1;
       }

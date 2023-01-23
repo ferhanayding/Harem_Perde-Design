@@ -1,39 +1,70 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Hr from "../hr/hr";
 import "./footer.scss";
+import {
+  MyLocationOutlined,
+  Call,
+  PhoneIphone,
+  Instagram,
+  Facebook,
+} from "@mui/icons-material";
 const Footer = () => {
   return (
     <div className="footer__container">
       <div className="footer__wrapper">
         <div className="footer__left">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente,
-            placeat!
-          </p>
+          <p>Lorem ipsum, dolor sit e, placeat!</p>
         </div>
         <div className="footer__center">
-          <span>Adres</span>
-          <span>Baku huseyin cavid pr. 528. mehle</span>
-          <div className="social__media_container"></div>
+          <ul className="list__items">
+            <span>Adres</span>
+            <li>Baku huseyin cavid pr. 528. mehle</li>
+          </ul>
+          <div className="social__media_container">
+            <a
+              target={"_blank"}
+              href={"https://www.instagram.com/haremperdebaku/"}
+            >
+              <Instagram className="sc" />
+            </a>
+            <a
+              target={"_blank"}
+              href={
+                "https://www.facebook.com/Harem-PerdeBrillanthome-474050882720532/"
+              }
+            >
+              <Facebook className="sc f" />
+            </a>
+          </div>
         </div>
         <div className="footer__right">
-          <span>Bilgi al</span>
-          <span>bilgi@gmail.com</span>
-          <span>05555555</span>
-          <span>01255555</span>
+          <ul className="list__items">
+            <span>Bilgi al</span>
+            <li>bilgi@gmail.com</li>
+            <li>05555555</li>
+            <li>01255555</li>
+          </ul>
         </div>
       </div>
+      <Hr />
       <div className="footer__bottom">
         <div className="footer__bottom_left">
           <ul>
             <li>
-              <Link>About</Link>
+              <Link to={"/about"} className="hover__underline_link">
+                About
+              </Link>
             </li>
             <li>
-              <Link>Our Works</Link>
+              <Link to={"/ourworks"} className="hover__underline_link">
+                Our Works
+              </Link>
             </li>
             <li>
-              <Link>Contact</Link>
+              <Link to={"/contact"} className="hover__underline_link">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
