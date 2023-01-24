@@ -9,18 +9,18 @@ const Featured = () => {
           {/* title */}
           <div className="featured__titles">
             <motion.span
-              initial={{ x: -1050, scale: 1 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
               // exit={{ scale: 1 }}
             >
               HAREM PERDE
             </motion.span>
 
             <motion.span
-              initial={{ x: 750, scale: 1 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1 }}
             >
               & DESIGN
             </motion.span>

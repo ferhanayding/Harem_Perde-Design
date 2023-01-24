@@ -1,0 +1,89 @@
+.work__steps_container {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 7rem;
+  padding-bottom: 5rem;
+  .work__steps_center {
+    display: flex;
+    flex-wrap: wrap;
+    padding-block: 4%;
+    .steps__left {
+      text-align: left;
+      flex: 1;
+      p {
+        font-size: 3rem;
+        width: 80%;
+        font-weight: 500;
+        word-wrap: break-word;
+      }
+    }
+    .steps__right {
+      text-align: left;
+      flex: 1;
+      align-self: end;
+      p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+      }
+    }
+  }
+  .work__steps_bottom {
+    position: relative;
+    z-index: 444;
+    display: flex;
+    .work__steps_item {
+      max-height: 300px;
+      z-index: 2;
+      &:not(:last-child) {
+        border-right: 1px solid rgba(0, 0, 0, 0.144);
+      }
+      width: 100%;
+      padding: 2rem;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+
+      span {
+        &:nth-child(2) {
+          font-size: 2.1rem;
+          font-weight: 400;
+          color: rgb(79, 83, 43);
+        }
+        &:nth-child(3) {
+          font-size: 1.1rem;
+          border-radius: 50%;
+          border: 1px solid rgba(0, 0, 0, 0.144);
+          text-align: center;
+          font-weight: 500;
+          align-self: flex-end;
+          padding: 3px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    .progressbar__container {
+      position: absolute;
+      display: flex;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+}
+.MuiLinearProgress-bar1Buffer {
+  background: rgb(197, 193, 157) !important;
+  z-index: 1 !important;
+}
+.css-1qdnzt4-MuiLinearProgress-bar2 {
+  background-color: transparent !important;
+  z-index: 1 !important;
+}
+.css-fl5ss-MuiLinearProgress-root {
+  height: 300px;
+  z-index: 1 !important;
+}
+.css-8ub8io-MuiLinearProgress-dashed {
+  display: none;
+}

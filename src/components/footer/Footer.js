@@ -2,13 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Hr from "../hr/hr";
 import "./footer.scss";
-import {
-  MyLocationOutlined,
-  Call,
-  PhoneIphone,
-  Instagram,
-  Facebook,
-} from "@mui/icons-material";
+import { Instagram, Facebook } from "@mui/icons-material";
 const Footer = () => {
   return (
     <div className="footer__container">
