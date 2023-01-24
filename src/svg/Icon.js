@@ -1361,10 +1361,37 @@ const Stairs = ({ size, color }) => {
     </svg>
   );
 };
+const PrevIcon = ({ size }) => {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <polyline stroke="currentColor" points="16 4 7 12 16 20" fill="none" />
+    </svg>
+  );
+};
+
+const NextIcon = ({ size, color }) => {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <polyline stroke="currentColor" points="8 4 17 12 8 20" fill="none" />
+    </svg>
+  );
+};
 const Icon = ({ name, size = 24, color = "rgb(193,154,91)" }) => {
   const icons = {
     tailor: Tailor,
     check: Check,
+    prevIcon: PrevIcon,
+    nextIcon: NextIcon,
     stairs: Stairs,
     drill: Drill,
     metre: Metre,

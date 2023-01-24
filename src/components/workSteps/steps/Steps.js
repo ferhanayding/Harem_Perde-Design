@@ -1,8 +1,7 @@
 import React from "react";
-import { HowToRegOutlined } from "@mui/icons-material";
 import "../workSteps.scss";
 import { Icon } from "../../../svg/Icon";
-import { motion } from "framer-motion";
+
 const Steps = () => {
   return (
     <>
