@@ -4,6 +4,7 @@ import WorkSteps from "../../components/workSteps/WorkSteps";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Hr from "../../components/hr/hr";
 import CategoryItems from "../../components/categoryItems/CategoryItems";
+import InfoSlider from "../../components/InfoSlider/InfoSlider";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -21,6 +22,7 @@ const Home = () => {
       <WorkSteps />
       <Hr color="rgb(110, 120, 124,0.6)" />
       <CategoryItems />
+      <InfoSlider />
     </>
   );
 };
