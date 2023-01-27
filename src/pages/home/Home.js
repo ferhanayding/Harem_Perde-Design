@@ -5,6 +5,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import Hr from "../../components/hr/hr";
 import CategoryItems from "../../components/categoryItems/CategoryItems";
 import InfoSlider from "../../components/InfoSlider/InfoSlider";
+import OurWorksItems from "../../components/ourWorksItem/OurWorksItems";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -23,6 +24,8 @@ const Home = () => {
       <Hr color="rgb(110, 120, 124,0.6)" />
       <CategoryItems />
       <InfoSlider />
+      <Hr color="rgb(110, 120, 124,0.6)" />
+      <OurWorksItems />
     </>
   );
 };

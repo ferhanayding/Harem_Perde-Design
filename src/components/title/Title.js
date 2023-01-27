@@ -1,9 +1,9 @@
 import React from "react";
 import "./title.scss";
-const Title = ({ title }) => {
+const Title = ({ title, className }) => {
   return (
     <div className="title__container">
-      <span>{title}</span>
+      <span className={className}>{title}</span>
     </div>
   );
 };

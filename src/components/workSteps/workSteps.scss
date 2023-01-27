@@ -49,7 +49,7 @@
         &:nth-child(2) {
           font-size: 2.1rem;
           font-weight: 400;
-          color: rgb(79, 83, 43);
+          color: black;
         }
         &:nth-child(3) {
           font-size: 1.1rem;
@@ -73,7 +73,7 @@
   }
 }
 .MuiLinearProgress-bar1Buffer {
-  background: rgb(202, 198, 166) !important;
+  background: rgb(200, 203, 188) !important;
   // background: rgb(197, 193, 157) !important;
   z-index: 1 !important;
 }
