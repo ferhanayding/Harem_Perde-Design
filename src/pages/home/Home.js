@@ -19,13 +19,13 @@ const Home = () => {
     <>
       <motion.div className="progress-bar" style={{ scaleX }} />
       <Featured />
-      <Hr color="rgb(110, 120, 124)" />
+      {/* <Hr color="rgb(110, 120, 124)" />
       <WorkSteps />
       <Hr color="rgb(110, 120, 124,0.6)" />
       <CategoryItems />
       <InfoSlider />
       <Hr color="rgb(110, 120, 124,0.6)" />
-      <OurWorksItems />
+      <OurWorksItems /> */}
     </>
   );
 };

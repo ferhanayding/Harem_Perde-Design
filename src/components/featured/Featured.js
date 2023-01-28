@@ -12,7 +12,6 @@ const Featured = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              // exit={{ scale: 1 }}
             >
               HAREM PERDE
             </motion.span>
@@ -22,7 +21,7 @@ const Featured = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 1 }}
             >
-              & DESIGN
+              &DESIGN
             </motion.span>
           </div>
           {/* img container */}
