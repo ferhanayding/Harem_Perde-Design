@@ -1,6 +1,7 @@
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
+// const Navbar = lazy(() => import("../navbar/Navbar"));
 
 const Layout = ({ children }) => {
   return (

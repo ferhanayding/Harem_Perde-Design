@@ -1,13 +1,20 @@
 .navbar__container {
   height: 5rem;
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 1.2rem;
-  width: 100%;
+  width: 100vw;
   z-index: 9999;
   display: flex;
-  background: var(--main);
+  background: linear-gradient(to top, transparent 0%, rgba(2, 2, 1, 0.632) 30%);
   align-items: center;
   justify-content: center;
+  transition: 0.5s all;
+  &.scrolled {
+    background: rgb(46, 49, 56);
+  }
   .navbar__wrapper {
     width: 100%;
     padding-inline: 1.2rem;
@@ -17,6 +24,13 @@
       flex: 1;
     }
     .navbar__left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      img {
+        width: 150px;
+      }
     }
     .navbar__center {
       display: flex;
@@ -25,6 +39,10 @@
         display: flex;
 
         li {
+          a {
+            // font-size: 25px;
+            color: white !important;
+          }
         }
       }
     }

@@ -1,64 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./featured.scss";
-import { motion } from "framer-motion";
+
+import ReactPlayer from "react-player";
 const Featured = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const onLoadedData = () => {
+    setIsVideoLoaded(true);
+  };
+  console.log(isVideoLoaded);
+
   return (
     <>
       <div className="featured__container">
-        <div className="featured__wrapper">
-          {/* title */}
-          <div className="featured__titles">
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              HAREM PERDE
-            </motion.span>
-
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1 }}
-            >
-              &DESIGN
-            </motion.span>
-          </div>
-          {/* img container */}
-          <div className="img__container">
-            <motion.div
-              className="first__img"
-              initial={{ x: 750, scale: 1 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Repellendus, dicta!
-              </p>
-              <img
-                src="https://fabric.axiomthemes.com/wp-content/uploads/2022/08/70_1-3-min.jpg"
-                alt=""
-              />
-            </motion.div>
-            <motion.div
-              className="second__img"
-              initial={{ y: 750, scale: 1 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <img
-                src="https://fabric.axiomthemes.com/wp-content/uploads/2022/08/70_1-3-min.jpg"
-                alt=""
-              />
-            </motion.div>
-            <div className="third__img">
-              <img
-                src="https://fabric.axiomthemes.com/wp-content/uploads/2022/08/70_1-3-min.jpg"
-                alt=""
-              />
-            </div>
-          </div>
+        <div style={{ opacity: isVideoLoaded ? 1 : 0 }}>
+          <ReactPlayer
+            url={"animasyon/asd.mp4"}
+            playing={true}
+            controls={false}
+            loop={false}
+            muted={true}
+            height="100%"
+            width="100vw"
+            playsinline={true}
+            onReady={onLoadedData}
+          />
         </div>
       </div>
     </>

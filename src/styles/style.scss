@@ -24,7 +24,7 @@ li {
 }
 a {
   text-decoration: none;
-  color: var(--dark_text);
+  color: white;
 }
 .progress-bar {
   position: fixed;
@@ -33,7 +33,7 @@ a {
   z-index: 9999;
   right: 0;
   height: 3px;
-  background: var(--dark_text);
+  background: rgb(255, 255, 255);
   transform-origin: 0%;
 }
 .hover__underline_link {
@@ -50,7 +50,7 @@ a {
     bottom: 0;
     left: 0;
     transform: scaleX(0);
-    background-color: var(--dark_text);
+    background-color: white;
     transform-origin: bottom right;
     transition: transform 0.1s ease-out;
   }
@@ -66,7 +66,7 @@ a {
       bottom: -3px;
       left: 0;
       transform: scaleX(1);
-      background-color: var(--dark_text);
+      background-color: white;
     }
   }
 }
