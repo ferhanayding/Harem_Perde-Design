@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Hr from "../hr/hr";
+import EffectSwiper from "../swiper/effectCard/EffectSwiper";
+import CubeSlider from "../swiper/cubeSlider/CubeSlider";
 import Title from "../title/Title";
-import OnWorkElement from "./ourWorkElement/OnWorkElement";
 import "./ourWorksItems.scss";
 
 const OurWorksItems = () => {
@@ -11,7 +11,7 @@ const OurWorksItems = () => {
       <Title title={"Our Works"} />
       <div className="our__work_itemsWrapper">
         <div className="our__work_itemsLeft">
-          <OnWorkElement />
+          <CubeSlider />
         </div>
         <div className="our__work_itemsRight">
           <div className="our__work_itemsRightWrapper">
@@ -31,10 +31,10 @@ const OurWorksItems = () => {
           </div>
         </div>
       </div>
-      {/* <Hr /> */}
+
       <div className="our__work_itemsWrapper reverse">
         <div className="our__work_itemsLeft reverse">
-          <OnWorkElement />
+          <CubeSlider />
         </div>
         <div className="our__work_itemsRight">
           <div className="our__work_itemsRightWrapper">
