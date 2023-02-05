@@ -6,7 +6,7 @@ import Hr from "../../components/hr/hr";
 import CategoryItems from "../../components/categoryItems/CategoryItems";
 import InfoSlider from "../../components/InfoSlider/InfoSlider";
 import OurWorksItems from "../../components/ourWorksItem/OurWorksItems";
-
+import "./style.scss";
 const Home = () => {
   const { scrollYProgress } = useScroll();
 
@@ -16,7 +16,7 @@ const Home = () => {
     restDelta: 0.001,
   });
   return (
-    <>
+    <div className="home__container">
       <motion.div className="progress-bar" style={{ scaleX }} />
       <Featured />
       <Hr color="rgb(110, 120, 124)" />
@@ -26,7 +26,7 @@ const Home = () => {
       <InfoSlider />
       <Hr color="rgb(110, 120, 124,0.6)" />
       <OurWorksItems />
-    </>
+    </div>
   );
 };
 

@@ -1,8 +1,7 @@
 .featured__container {
   top: 7rem;
   height: calc(100% - 5rem);
-  // height: 100%;
-  // padding: 10%;
+
   padding-bottom: 2%;
   width: 100vw;
   .featured__wrapper {
@@ -12,11 +11,6 @@
     .featured__square_item {
       flex: 1;
       height: 100% !important;
-      &:first-child {
-        // background: #000;
-      }
-      &:last-child {
-      }
     }
   }
 }

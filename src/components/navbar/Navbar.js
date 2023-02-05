@@ -1,47 +1,69 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+
+import useWindowSize from "../../hooks/useWindowSize";
 import "./navbar.scss";
+import Navigation from "./navigation/Navigation";
+import Sidebar from "./sidebar/Sidebar";
+import { useEffect, useRef } from "react";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  let menuRef = useRef();
+  const { width } = useWindowSize();
+  const [visible, setVisible] = useState(false);
+  console.log(visible);
+  useEffect(() => {
+    if (visible) {
+      let handler = (e) => {
+        if (!menuRef.current.contains(e.target)) {
+          setVisible(false);
+          console.log(menuRef.current);
+        }
+      };
 
-  window.onscroll = () => {
-    setIsScrolled(window.pageYOffset === 0 ? false : true);
-    return () => (window.onscroll = null);
-  };
+      document.addEventListener("mousedown", handler);
+
+      return () => {
+        document.removeEventListener("mousedown", handler);
+      };
+    }
+  });
   return (
-    <nav
-      className={
-        isScrolled ? "navbar__container scrolled" : "navbar__container"
-      }
-    >
+    <nav className={"navbar__container"}>
       <div className="navbar__wrapper">
-        <div className="navbar__left">logo</div>
+        <div className="navbar__left">
+          {width <= 768 ? (
+            <div
+              className="navbar__hamburger_menu"
+              onClick={() => setVisible(!visible)}
+            >
+              <span className="bun"></span>
+              <span className="bun"></span>
+              <span className="bun"></span>
+            </div>
+          ) : (
+            <span>logo</span>
+          )}
+        </div>
         <div className="navbar__center">
-          <ul>
-            <li>
-              <NavLink exact to="/" className="hover__underline_link">
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/about" className="hover__underline_link">
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={"/contact"} className="hover__underline_link">
-                Contact
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={"/ourworks"} className="hover__underline_link">
-                Our Works
-              </NavLink>
-            </li>
-          </ul>
+          {width > 768 ? (
+            <Navigation
+              className={"navigation__container"}
+              setVisible={setVisible}
+            />
+          ) : (
+            <span>logo</span>
+          )}
         </div>
         <div className="navbar__right"></div>
+      </div>
+      <div
+        ref={menuRef}
+        className="sidebar_container"
+        style={{
+          left: visible ? "0px" : "-100%",
+        }}
+      >
+        <Sidebar setVisible={setVisible} visible={visible} />
       </div>
     </nav>
   );

@@ -1,23 +1,23 @@
+@import "../../styles/responsive.scss";
 .navbar__container {
   height: 5rem;
-  position: fixed;
+  position: sticky;
+  max-height: 5rem;
   top: 0;
-  left: 0;
-  right: 0;
-  padding: 1.2rem;
+  padding: 1rem;
   width: 100vw;
-  z-index: 9999;
+  z-index: 999;
   display: flex;
-  background: linear-gradient(to top, transparent 0%, rgba(2, 2, 1, 0.632) 30%);
   align-items: center;
   justify-content: center;
-  transition: 0.5s all;
-  &.scrolled {
-    background: rgb(46, 49, 56);
+  background: var(--main);
+  @include SmallTablet {
+    height: 4rem;
+    padding: 1rem;
   }
   .navbar__wrapper {
     width: 100%;
-    padding-inline: 1.2rem;
+    height: 100%;
     display: flex;
     align-items: center;
     * {
@@ -31,20 +31,78 @@
       img {
         width: 150px;
       }
+      .navbar__hamburger_menu {
+        height: 15px;
+        width: 15px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4px;
+
+        .bun {
+          width: 30px;
+          border-radius: 1px;
+          height: 4px;
+          background-color: var(--dark_text);
+        }
+      }
     }
     .navbar__center {
       display: flex;
-      flex: 1.5;
-      ul {
+      align-items: center;
+      flex: 1.8;
+      .navigation__container {
         display: flex;
 
         li {
+          margin: 10px;
+
           a {
-            // font-size: 25px;
-            color: white !important;
+            font-weight: 500 !important;
           }
         }
       }
     }
   }
+  .sidebar_container {
+    position: absolute;
+    top: 0;
+    transition: 0.5s all;
+    z-index: 999;
+
+    height: 100vh;
+    width: 40%;
+    background: var(--dark_text);
+    @include Mobile {
+      width: 100%;
+    }
+
+    .sidebar__navigation {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      li {
+        text-align: start;
+        margin-left: 2rem;
+
+        @include Mobile {
+          text-align: center;
+          margin: 0;
+        }
+        a {
+          color: white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+.sidebar__icon {
+  margin-block: 2rem;
+  display: flex;
+  padding-inline: 1rem;
+  align-items: center;
+  justify-content: flex-end;
 }
