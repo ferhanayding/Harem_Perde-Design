@@ -24,6 +24,7 @@ export default function LinearDeterminate() {
     <Box
       sx={{
         width: "100%",
+        height: "100%",
       }}
     >
       <LinearProgress variant="buffer" value={progress} />

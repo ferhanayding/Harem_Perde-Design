@@ -6,9 +6,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "./cubeSlider.scss";
 // import required modules
-import { EffectCube, Pagination, Autoplay } from "swiper";
+import { EffectCube, Navigation, Pagination, Autoplay } from "swiper";
 
 export default function CubeSlider() {
   return (
@@ -23,6 +24,7 @@ export default function CubeSlider() {
         delay: 2500,
         disableOnInteraction: false,
       }}
+      navigation={true}
       cubeEffect={{
         shadow: true,
         slideShadows: true,
@@ -32,8 +34,8 @@ export default function CubeSlider() {
       pagination={{
         clickable: true,
       }}
-      modules={[EffectCube, Autoplay, Pagination]}
-      className="mySwiper"
+      modules={[EffectCube, Autoplay, Pagination, Navigation]}
+      className="cubeSlider"
     >
       <SwiperSlide>
         <img src="https://m.media-amazon.com/images/I/817SgcFx5GL._SL1500_.jpg" />

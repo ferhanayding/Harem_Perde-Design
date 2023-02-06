@@ -4,7 +4,9 @@ import React from "react";
 import Title from "../title/Title";
 import Steps from "./steps/Steps";
 import LinearDeterminate from "./steps/progress";
+import useWindowSize from "../../hooks/useWindowSize";
 const WorkSteps = () => {
+  const { width } = useWindowSize();
   return (
     <div className="work__steps_container">
       <Title title={"Work Steps"} />
@@ -15,18 +17,16 @@ const WorkSteps = () => {
         <div className="steps__right">
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos eos,
-            vero corrupti fugiat magni quia id a quis nam quod aut quam
-            <br />
-            similique modi consequuntur rem maiores iure expedita
-            exercitationem?
           </p>
         </div>
       </div>
       <div className="work__steps_bottom">
         <Steps />
-        <div className="progressbar__container">
-          <LinearDeterminate />
-        </div>
+        {width > 740 && (
+          <div className="progressbar__container">
+            <LinearDeterminate />
+          </div>
+        )}
       </div>
     </div>
   );

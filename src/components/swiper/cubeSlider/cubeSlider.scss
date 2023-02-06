@@ -1,16 +1,22 @@
-.swiper {
-  width: 400px;
-  height: 400px;
+.cubeSlider {
+  width: 450px;
+  height: 450px;
   border-radius: 20px !important;
-}
+  position: relative;
+  .swiper-slide {
+    cursor: col-resize;
+    // cursor: url("../../../images/arrow.png") auto;
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  border-radius: 20px !important;
+    background-position: center;
+    background-size: cover;
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 20px !important;
+    }
+  }
+  .swiper-button-next {
+  }
+  .swiper-button-prev {
+  }
 }
